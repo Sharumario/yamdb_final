@@ -54,7 +54,7 @@ jobs:
             username: ${{ secrets.SERVER_USER }}
             key: ${{ secrets.SSH_KEY }}
             script: |
-              sudo docker pull sharumario/yambd:latest
+              sudo docker pull sharumario/yambd
               sudo docker-compose stop
               sudo docker-compose rm web
               touch .env
@@ -64,5 +64,4 @@ jobs:
               echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
               echo DB_HOST=${{ secrets.DB_HOST }} >> .env
               echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-              echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
               sudo docker-compose up -d
