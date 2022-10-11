@@ -53,9 +53,8 @@ jobs:
             host: ${{ secrets.SERVER_HOST }}
             username: ${{ secrets.SERVER_USER }}
             key: ${{ secrets.SSH_KEY }}
-            passphrase: ${{ secrets.SERVER_PASS }}
             script: |
-              sudo docker pull sharumario/yamdb_final:latest
+              sudo docker pull sharumario/yambd:latest
               sudo docker-compose stop
               sudo docker-compose rm web
               touch .env
