@@ -41,7 +41,7 @@ jobs:
         with:
           push: true
           context: api_yamdb
-          tags: sharumario/yambd:latest
+          tags: sharumario/yamdb_final:latest
           file: api_yamdb/Dockerfile
   deploy:
       runs-on: ubuntu-latest
@@ -55,7 +55,7 @@ jobs:
             username: ${{ secrets.USER }}
             key: ${{ secrets.SSH_KEY }}
             script: |
-              sudo docker pull sharumario/yambd
+              sudo docker pull sharumario/yamdb_final
               sudo docker-compose stop
               sudo docker-compose rm web
               touch .env
