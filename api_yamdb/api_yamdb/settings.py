@@ -95,9 +95,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/api/static/'
+STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'api/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, '/api/static/')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
