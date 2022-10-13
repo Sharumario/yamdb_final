@@ -57,10 +57,6 @@ TELEGRAM_TOKEN - токен бота (получить токен можно у 
 
 sudo docker-compose exec web python manage.py migrate
 
-БД из .csv файлов:
-
-sudo docker-compose exec web python manage.py upload_csv_files
-
 Суперюзер создаётся внутри сервера, с помощью команды:
 
 sudo docker-compose exec web python createsuperuser
