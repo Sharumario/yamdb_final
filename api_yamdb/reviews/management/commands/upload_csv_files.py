@@ -29,7 +29,7 @@ class Command(BaseCommand):
         for tpl in TABLES:
             model, csv_f = tpl
             with open(
-                f'{settings.BASE_DIR}/static/data/{csv_f}',
+                f'{settings.BASE_DIR}/app/static/data/{csv_f}',
                 'r',
                 encoding='utf-8'
             ) as csv_file:
@@ -44,7 +44,7 @@ class Command(BaseCommand):
                     model.objects.get_or_create(**data)
         model, csv_f = GENRE_TITLE_TPL
         with open(
-                f'{settings.BASE_DIR}/static/data/{csv_f}',
+                f'{settings.BASE_DIR}/app/static/data/{csv_f}',
                 'r',
                 encoding='utf-8'
         ) as csv_file:
