@@ -23,7 +23,13 @@ services:
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./static/redoc.yaml:/var/html/static/redoc.yaml
-      - ./static/data:/var/html/static/data/
+      - ./static/data/category.csv:/var/html/static/data/category.csv
+      - ./static/data/comments.csv:/var/html/static/data/comments.csv
+      - ./static/data/genre_title.csv:/var/html/static/data/genre_title.csv
+      - ./static/data/genre.csv:/var/html/static/data/genre.csv
+      - ./static/data/review.csv:/var/html/static/data/review.csv
+      - ./static/data/titles.csv:/var/html/static/data/titles.csv
+      - ./static/data/users.csv:/var/html/static/data/users.csv
       - static_value:/var/html/static/
       - media_value:/var/html/media/
     depends_on:
