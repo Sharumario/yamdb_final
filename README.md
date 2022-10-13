@@ -53,6 +53,14 @@ TELEGRAM_TOKEN - токен бота (получить токен можно у 
 
 Развёртывание происходит автоматически с помощью Actions workflow. В файле yamdb_workflow.yml описана автоматическая последовательность действий при push репозитория. За состоянием работы Actions workflow можно проследить во вкладке Actions в репозиторий GitHub.
 
+Миграции осуществляются через команду на сервере:
+
+sudo docker-compose exec web python manage.py migrate
+
+Заполнение БД из подготовленных .csv файлов
+
+sudo docker-compose exec web python manage.py upload_csv_files
+
 Суперюзер создаётся внутри сервера, с помощью команды:
 
 sudo docker-compose exec web python createsuperuser
