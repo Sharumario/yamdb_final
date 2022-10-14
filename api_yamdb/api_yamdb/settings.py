@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='key')
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default=['localhost', ])
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default=['localhost', '178.154.222.78', ])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -97,7 +97,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, '/reviews/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'reviews/static')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
